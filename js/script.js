@@ -4,7 +4,7 @@ const calculateExpense = () => {
   const rent = document.querySelector("#rent").value;
   const clothes = document.querySelector("#clothes").value;
 
-  console.log("working");
+
 
   if (
     income < 0 ||
@@ -34,6 +34,15 @@ const calculateExpense = () => {
     document.getElementById("total-expense").innerText = expense.toFixed(2);
     document.getElementById("balance").innerText = balance.toFixed(2);
   }
+
+
+  document.querySelector("#income").value = '';
+  document.querySelector("#food").value = '';
+  document.querySelector("#rent").value = '';
+  document.querySelector("#clothes").value = '';
+
+
+
 };
 
 const calculateSavings = () => {
@@ -61,4 +70,7 @@ const calculateSavings = () => {
     document.getElementById("saving-amount").innerText = savingAmount.toFixed(2);
     document.getElementById("remaining-balance").innerText = remainingBalance.toFixed(2);
   }
+
+  document.getElementById("save").value = '';
+
 };
